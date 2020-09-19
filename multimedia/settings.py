@@ -27,7 +27,7 @@ SECRET_KEY = '&hx*qq)92x*_+#dat426)%8e18k=8)5u92+u=j+4lmwio493dz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['multimeteor.heroku.com']
+ALLOWED_HOSTS = ['multimeteor.herokuapp.com']
 
 
 # Application definition
