@@ -1,0 +1,22 @@
+{% extends 'multi/base.html' %}
+{% block title %}Update Profile{% endblock %}
+{% block body%}
+    <div class="login-page">
+  <div class="form" >
+  <h2>Update Profile</h2>
+ <form class="login-form" method="POST" action="." enctype="multipart/form-data">
+      {%csrf_token%}
+        {% for field in account_form %}
+    <p>
+        {{field}}
+        {% for error in field_errors %}
+        <p style="color: red;">{{error}}</p>
+        {%endfor%}
+    </p>
+        {% endfor %}
+      <button type="submit">Update</button>
+
+    </form>
+  </div>
+    </div>
+{%endblock body%}

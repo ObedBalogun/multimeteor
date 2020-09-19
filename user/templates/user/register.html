@@ -1,0 +1,26 @@
+{% extends 'multi/base.html' %}
+{% block title %}Sign Up{% endblock %}
+
+{% block body%}
+<div class="login-page">
+  <div class="form" >
+ <form class="login-form" id="signup" action="{% url 'media:signup'%}" method="post" >
+    {%csrf_token%}
+        {% for field in registration_form %}
+    <p>
+        {{field}}
+        {% for error in field.errors %}
+        <p style="color: red;">{{error}}</p>
+        {%endfor%}
+    </p>
+        {% endfor %}
+    <button type="submit">Register</button>
+ <p >Already registered? <a href="{% url 'media:login' %}" id="message1">Sign In</a></p>
+</form>
+
+
+
+  </div>
+  </div>
+
+{%endblock body%}

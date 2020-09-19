@@ -1,0 +1,10 @@
+{% extends 'multi/base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock %}
+{% block body %}
+    <form action="." method="post">
+    {% csrf_token %}
+    {{ object.author }}
+        <input type="submit" value="YES">
+    </form>
+{% endblock %}

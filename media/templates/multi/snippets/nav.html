@@ -1,0 +1,22 @@
+    <div class="side-nav">
+    {% if request.user.is_authenticated %}
+    <div class="navigation">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link active" href="{% url 'media:homepage'%}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'media:media'%}" >Media</a>
+        </li>
+        <li class="nav-item"><a href="{% url 'media:profile'%}" class="nav-link">Profile</a></li>
+        <li class="nav-item"><a href="{% url 'media:logout'%}" class="nav-link">Logout</a></li>
+    </ul>
+
+			<div class="colorlib-footer">
+				<h1 id="colorlib-logo" class="mb-4">By: Obed <span>Balogun</span></h1>
+
+	  Copyright ©<script>document.write(new Date().getFullYear());</script>
+			</div>
+		</div>
+   {% endif %}
+		</div>

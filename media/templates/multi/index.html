@@ -1,0 +1,63 @@
+{% extends 'multi/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block body %}
+        <div class="container">
+    	<div class="row px-md-4">
+		<div class="col-md-10 offset-1">
+			<form action="." method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+				<div class="form-group">
+                    {% for field in form %}
+                        {{ field }}
+                    {% endfor %}
+			</div>
+
+
+				<!-- Submit btn -->
+				<button class="submit-button btn btn-primary btn-block" type="submit">POST</button>
+			</form>
+
+            <br>
+        {% if posts %}
+            {% for post in posts %}
+    <div class="row pt-md-4">
+        <div class="col-md-12">
+        <div class="post-entry d-md-flex" style="width: 100%; margin-bottom: 3em">
+            {% if post.author.picture %}
+            <img alt="profile pic" class="img img-2" src="{{post.author.picture.url}}">
+                {% else %}
+                <img alt="profile pic" class="img img-2" src="{% static 'multi/images/images.jpeg' %}">
+
+            {% endif %}
+            <div class="text text-2 pl-md-4" style="color: white">
+                    <div class="meta-wrap">
+                        <p class="meta">
+                            <span style="color: black">
+                                <i class="fas fa-user-alt"></i>
+                                  @{{ post.author.username }}</span>
+                        </p>
+                    </div>
+                    <p class="mb-4">{{ post.content }}</p>
+                <form method="post" action="{% url 'media:delete' post.id %}">
+                    {% csrf_token %}
+                    <div class="float-right">
+                    <button type="submit" value="DELETE" class="close">
+                                <span>&times;</span>
+                            </button>
+                        </div>
+                </form>
+
+                </div>
+
+    </div>
+            <hr>
+        </div>
+     </div>
+    {% endfor %}
+        {% endif %}
+    </div>
+        </div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'multi/base.html' %}
+{% block title %}Welcome {% endblock %}
+{% block body%}
+    <div class="login-page">
+  <div class="form" >
+ <form class="login-form" id="login" method="post" action="{%url 'multi:login' %}">
+      {%csrf_token%}
+        {% for field in login_form %}
+    <p>
+        {{field}}
+        {% for error in field_errors %}
+        <p style="color: red;">{{error}}</p>
+        {%endfor%}
+    </p>
+        {% endfor %}
+      <button type="submit">login</button>
+      <p >Not registered? <a href="{% url 'multi:signup' %}" id="message2">Create an account</a></p>
+    </form>
+  </div>
+    </div>
+{%endblock body%}

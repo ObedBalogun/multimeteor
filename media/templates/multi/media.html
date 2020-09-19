@@ -1,0 +1,28 @@
+{% extends 'multi/base.html' %}
+{% load static %}
+{% block title %}Media{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="gallery">
+       <div class="service">
+            <h4 class="services"><span>Gallery</span></h4>
+           <a href="{% url 'media:upload'%}">Add Media</a>
+
+       </div>
+
+            <div class="row mb-5">
+                {% for media in files %}
+			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                            <a data-fancybox="gallery" href="{{ media.files.url }}" ></a>
+                            <img class="zoom img-fluid" src="{{ media.files.url }}" alt="Picture" >
+
+
+            </div>
+                        {% endfor %}
+
+            </div>
+            </div>
+            </div>
+
+{% endblock %}
