@@ -1,5 +1,5 @@
 """
-ASGI config for multimedia project.
+ASGI config for multimeteor project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'multimedia.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'multimeteor.settings')
 
 application = get_asgi_application()
