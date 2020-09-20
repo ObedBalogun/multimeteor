@@ -1,9 +1,9 @@
-{% extends 'multi/base.html' %}
+{% extends 'media/base.html' %}
 {% block title %}Welcome {% endblock %}
 {% block body%}
     <div class="login-page">
   <div class="form" >
- <form class="login-form" id="login" method="post" action="{%url 'multi:login' %}">
+ <form class="login-form" id="login" method="post" action="{%url 'media:login' %}">
       {%csrf_token%}
         {% for field in login_form %}
     <p>
@@ -14,7 +14,7 @@
     </p>
         {% endfor %}
       <button type="submit">login</button>
-      <p >Not registered? <a href="{% url 'multi:signup' %}" id="message2">Create an account</a></p>
+      <p >Not registered? <a href="{% url 'media:signup' %}" id="message2">Create an account</a></p>
     </form>
   </div>
     </div>

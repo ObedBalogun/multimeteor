@@ -1,4 +1,4 @@
-{% extends 'multi/base.html' %}
+{% extends 'media/base.html' %}
 {% load static %}
 {% block title %}Home{% endblock %}
 {% block body %}
@@ -27,7 +27,7 @@
             {% if post.author.picture %}
             <img alt="profile pic" class="img img-2" src="{{post.author.picture.url}}">
                 {% else %}
-                <img alt="profile pic" class="img img-2" src="{% static 'multi/images/images.jpeg' %}">
+                <img alt="profile pic" class="img img-2" src="{% static 'media/images/images.jpeg' %}">
 
             {% endif %}
             <div class="text text-2 pl-md-4" style="color: white">

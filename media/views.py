@@ -29,7 +29,7 @@ def home(request):
         form = PostForm()
         context['form'] = form
     context['posts'] = Post.objects.all()
-    return render(request, 'multi/index.html', context)
+    return render(request, 'media/index.html', context)
 
 def posts(request):
     context ={}
@@ -50,7 +50,7 @@ def posts(request):
 
 class MediaDetail(DetailView):
     model = Media
-    template_name = 'multi/media.html'
+    template_name = 'media/media.html'
     context_object_name = 'files'
     def get_object(self, queryset=None):
         queryset = Media.objects.filter(author=self.request.user)
@@ -66,7 +66,7 @@ def media(request):
     pass
 
 def contact(request):
-    return render(request, 'multi/contact.html')
+    return render(request, 'media/contact.html')
 
 
 def upload(request):
@@ -84,11 +84,11 @@ def upload(request):
     else:
         form = GalleryForm()
         context['form'] = form
-    return render(request,'multi/upload.html',context)
+    return render(request,'media/upload.html',context)
 
 
 class PostDelete(DeleteView):
-    template_name = "multi/post_delete.html"
+    template_name = "media/post_delete.html"
 
     def get_object(self,**kwargs):
         id_ = self.kwargs.get("id")
