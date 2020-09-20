@@ -1,1 +1,1 @@
-web: gunicorn multimeteor.wsgi --log-file
+web: gunicorn multimeteor.wsgi
