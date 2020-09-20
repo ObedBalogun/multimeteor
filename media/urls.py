@@ -5,7 +5,7 @@ from user.views import registration_view, login_view,logout_view,account_view
 app_name = 'media'
 
 urlpatterns = [
-    path('/', login_view, name='login'),
+    path('', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
     path('register/', registration_view, name='signup'),
     path('homepage/', home, name='homepage'),

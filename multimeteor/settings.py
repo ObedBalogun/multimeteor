@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = 'SECRET_KEY'
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '&hx*qq)92x*_+#dat426)%8e18k=8)5u92+u=j+4lmwio493dz')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+DEBUG = 'False'
 
 
 ALLOWED_HOSTS = ['multimeteor.herokuapp.com','127.0.0.1']
