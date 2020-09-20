@@ -57,9 +57,11 @@ def login_view(request):
                 login(request, user)
                 return redirect('media:homepage')
         else:
-            form = UserAuthenticationForm()
             context['login_form'] = form
 
+    else:
+        form = UserAuthenticationForm()
+        context['login_form'] = form
     return render(request, 'user/login.html', context)
 
 
