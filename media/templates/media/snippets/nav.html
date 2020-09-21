@@ -1,5 +1,7 @@
-    <div class="side-nav">
+    <div class="side-nav" id="nav-div">
     {% if request.user.is_authenticated %}
+	<a href="#" class="nav-toggle nav-toggle-js"><i></i></a>
+
     <div class="navigation">
     <ul class="nav flex-column">
         <li class="nav-item">
@@ -12,8 +14,8 @@
         <li class="nav-item"><a href="{% url 'media:logout'%}" class="nav-link">Logout</a></li>
     </ul>
 
-			<div class="colorlib-footer">
-				<h1 id="colorlib-logo" class="mb-4">By: Obed <span>Balogun</span></h1>
+			<div class="footer">
+				<h1 class="mb-4">By: Obed <span>Balogun</span></h1>
 
 	  Copyright ©<script>document.write(new Date().getFullYear());</script>
 			</div>

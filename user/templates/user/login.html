@@ -11,14 +11,15 @@
         {% for error in field_errors %}
         <p style="color: red;">{{error}}</p>
         {%endfor%}
-    </p>
+
         {% endfor %}
- {% if login_form.non_field_errors %}
+    {% if login_form.non_field_errors %}
             <div style="color: red">
                 <p>{{login_form.non_field_errors}}</p>
             </div>
 
         {%endif%}
+ </p>
       <button type="submit">login</button>
       <p >Not registered? <a href="{% url 'media:signup' %}" id="message2">Create an account</a></p>
     </form>
