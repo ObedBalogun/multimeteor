@@ -129,11 +129,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_ROOT = os.path.join(BASE_DIR, 'media/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Extra lookup directories for collectstatic to find static files
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'media/static'),
 )
 
 #  Add configuration for static files storage using whitenoise
