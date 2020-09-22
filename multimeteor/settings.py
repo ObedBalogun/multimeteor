@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '&hx*qq)92x*_+#dat426)%8e18k=8)
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
-ALLOWED_HOSTS = ['multimeteor.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['multimeteor.herokuapp.com','localhost']
 
 
 # Application definition
