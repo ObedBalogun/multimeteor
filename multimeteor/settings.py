@@ -133,7 +133,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Extra lookup directories for collectstatic to find static files
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'media/static'),
 )
 
 #  Add configuration for static files storage using whitenoise
