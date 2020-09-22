@@ -180,7 +180,7 @@ LOGGING = {
             'propagate': True,
             'level':'DEBUG',
         },
-        'MYAPP': {
+        'MULTIMETEOR': {
             'handlers': ['file'],
             'level': 'DEBUG',
         },
