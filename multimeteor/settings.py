@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'media',
     'user',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -139,6 +140,16 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #
+
+AWS_ACCESS_KEY_ID = 'AKIAXPED6J37C3GMIBXI'
+AWS_STORAGE_BUCKET_NAME = 'brotherbalogun'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+AWS_S3_OBJECT_PARAMETERS ={
+    'CacheControl':'max-age=86400'
+}
+
+DEFAULT_FILE_STORAGE = 'multimeteor.storage_backends.MediaStorage'
 import dj_database_url
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)

@@ -42,10 +42,10 @@ var mobileMenuOutsideClick = function() {
 		});
 
 		$(window).scroll(function(){
-			if ( $('body').hasClass('offcanvas') ) {
+			if ( $('body').hasClass('panel') ) {
 
-    			$('body').removeClass('offcanvas');
-    			$('.js-colorlib-nav-toggle').removeClass('active');
+    			$('body').removeClass('panel');
+    			$('.nav-toggle-js').removeClass('active');
 
 	    	}
 		});
