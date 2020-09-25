@@ -84,4 +84,4 @@ def account_view(request):
             )
 
     context['account_form'] = form
-    return render(request, 'media/new.html', context)
+    return render(request, 'user/user_update.html', context)
