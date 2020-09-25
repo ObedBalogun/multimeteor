@@ -12,13 +12,25 @@
     <title>{% block title %}Title{% endblock %}</title>
   </head>
 <body>
+<div class="paige">
    {% include 'media/snippets/nav.html' %}
         <div id="main">
+{#        <div id="nav-icon">#}
+{#  <span></span>#}
+{#  <span></span>#}
+{#  <span></span>#}
+{#  <span></span>#}
+{#</div>#}
+{#                <button type="button" id="sidebarCollapse" class="btn nav-toggle-js btn-primary">#}
+{#              <i class="fas fa-bars"></i>#}
+{#              <span class="sr-only">Toggle Menu</span>#}
+{#            </button>#}
             <section class="main-section">
                 {% block body %}
                 {% endblock %}
             </section>
         </div>
+</div>
 <script src="https://kit.fontawesome.com/6c3211b0c5.js" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
@@ -50,6 +62,19 @@
 	}, function(){
 
 		$(this).removeClass('transition');
+	});
+    $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+  });
+	$('.nav-toggle').click(function(){
+		$(this).toggleClass('open');
+		if ($('body').hasClass('panel')) {
+
+ 				$('body').removeClass('panel');
+ 			} else {
+
+ 				$('body').addClass('panel');
+ 			}
 	});
        });
 

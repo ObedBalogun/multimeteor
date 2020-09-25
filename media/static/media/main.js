@@ -8,47 +8,50 @@ var fullHeight = function() {
 	};
 	fullHeight();
 
-var burgerMenu = function() {
 
-		$('.nav-toggle-js').on('click', function(event){
-			event.preventDefault();
-			var $this = $(this);
+// var burgerMenu = function() {
+//
+// 		$('#nav-icon').on('click', function(event){
+// 			event.preventDefault();
+// 			var $this = $(this);
+//
+// 			if ($('nav').hasClass('panel')) {
+// 				$this.removeClass('active');
+// 				$this.toggleClass('open');
+// 				$('nav').removeClass('panel');
+// 			} else {
+// 				$this.addClass('active');
+// 				// $this.toggleClass('open');
+// 				$('nav').addClass('panel');
+// 			}
+// 		});
+// 	};
+// 	burgerMenu();
 
-			if ($('body').hasClass('panel')) {
-				$this.removeClass('active');
-				$('body').removeClass('panel');
-			} else {
-				$this.addClass('active');
-				$('body').addClass('panel');
-			}
-		});
-	};
-	burgerMenu();
+// var mobileMenuOutsideClick = function() {
+//
+// 		$(document).click(function (e) {
+// 	    var container = $("#nav-div, .nav-toggle-js");
+// 	    if (!container.is(e.target) && container.has(e.target).length === 0) {
+//
+// 	    	if ( $('body').hasClass('panel') ) {
+//
+//     			$('body').removeClass('panel');
+//     			$('.nav-toggle-js').removeClass('active');
+//
+// 	    	}
+//
+// 	    }
+// 		});
 
-var mobileMenuOutsideClick = function() {
+		// $(window).scroll(function(){
+		// 	if ( $('body').hasClass('panel') ) {
+		//
+    	// 		$('body').removeClass('panel');
+    	// 		$('.nav-toggle-js').removeClass('active');
+		//
+	    // 	}
+		// });
 
-		$(document).click(function (e) {
-	    var container = $("#nav-div, .nav-toggle-js");
-	    if (!container.is(e.target) && container.has(e.target).length === 0) {
-
-	    	if ( $('body').hasClass('panel') ) {
-
-    			$('body').removeClass('panel');
-    			$('.nav-toggle-js').removeClass('active');
-
-	    	}
-
-	    }
-		});
-
-		$(window).scroll(function(){
-			if ( $('body').hasClass('panel') ) {
-
-    			$('body').removeClass('panel');
-    			$('.nav-toggle-js').removeClass('active');
-
-	    	}
-		});
-
-	};
-	mobileMenuOutsideClick();
+	// };
+	// mobileMenuOutsideClick();
