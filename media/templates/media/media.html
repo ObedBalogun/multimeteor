@@ -3,21 +3,21 @@
 {% block title %}Media{% endblock %}
 {% block body %}
 <div class="container">
-    <div class="gallery">
-       <div class="service">
+    <div class="photo_gallery">
+
+        <div class="service">
             <h4 class="services"><span>Gallery</span></h4>
            <a href="{% url 'media:upload'%}">Add Media</a>
 
-       </div>
+        </div>
 
             <div class="row mb-5">
                 {% for media in files %}
 			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-
-                            <a href="{{ media.files.url }}" data-fancybox="images" data-caption="Caption {{ media.id }}" ></a>
-                            <img class="zoom img-fluid" src="{{ media.files.url }}" alt="Picture" >
-
-
+              <a href="{{ media.files.url }}" data-fancybox="images" data-caption="Caption {{ media.id }}" class="fancybox" >
+{#                <a href="{{ media.files.url }}" data-toggle="lightbox" data-gallery="gallery" class="l-box"></a>#}
+                <img class="zoom img-fluid" src="{{ media.files.url }}" alt="Picture" >
+                  </a>
             </div>
                         {% endfor %}
 
