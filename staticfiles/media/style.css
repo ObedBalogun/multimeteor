@@ -18,7 +18,6 @@ body.panel {
       background: #fff;
       z-index: 999;
       position: fixed;
-    /*margin-left: -300px;*/
     }
     body.panel #main, body.panel .nav-toggle{
       top: 0;
@@ -32,9 +31,9 @@ body.panel {
     display: block;
     height: 150px;
     width: 150px;
-    /*-webkit-border-radius: 50%;*/
-    /*-moz-border-radius: 50%;*/
-    /*-ms-border-radius: 50%;*/
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
     border-radius: 50%;
 }
 .paige{
