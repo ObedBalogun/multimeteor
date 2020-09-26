@@ -49,4 +49,4 @@ $('[data-fancybox="images"]').fancybox({
   }
 });
 }
-fancy();
+// fancy();
